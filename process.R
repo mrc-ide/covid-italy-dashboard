@@ -1,0 +1,5 @@
+source("functions.R")
+info <- download(data_info(), "raw")
+dat <- process(info)
+saveRDS(dat, "processed.rds")
+write.csv(dat, "processed.csv", row.names = FALSE)
